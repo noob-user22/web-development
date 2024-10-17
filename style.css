@@ -50,6 +50,17 @@ nav .right span{
     transition: color 0.3s ease;
 }
 
+nav .right span a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav .right span a:focus,
+nav .right span a:active{
+    color: red;
+    font-weight: bold;
+
+}
 nav .right span:hover {
     color: red;
 }
@@ -163,13 +174,14 @@ nav {
 
 /* SECTION 2: ABOUT ME */
 .about-me {
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-left: 320px;
-    margin-right: 50px;
-    margin-top: 300px;
-    margin-bottom: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 200px;
 }
 
 .about-me .text {
@@ -321,7 +333,7 @@ nav {
 .solid-line {
     height: 2px;
     background-color: black;
-    margin-top: 20px;
+    margin-top: 40px;
     width: 500px;
 }
 
@@ -349,22 +361,19 @@ nav {
     padding: 20px 0;
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
-    color:rgb(13, 13, 13) !important;
+    color:rgb(13, 13, 13);
 }
 
 /* Dark Mode */
 
 body.dark-mode {
-    background-color:rgb(34, 34, 34);
+    background-color: #121212;
     color: white;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode .about-me p{
     color: lightgray;
-}
-
-body.dark-mode .view-projects p{
-    color: white;
 }
 
 .description .text p {
