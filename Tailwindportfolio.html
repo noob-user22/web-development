@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="tailwind.css">
+        <title>My Tailwind Portfolio</title>
+
+
+        <!--Google fonts-->
+        <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"
+        />
+
+
+        <!--Font Awesome-->
+        <link
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
+
+        
+        <!--Tailwind css-->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <script>
+            tailwind.config = {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#1D4ED8" ,
+                            accent: '#f97316',
+                            background: "rgba(182, 255, 251, 0.959)",
+                            'dark-background': "#1a1a1a",
+                            'dark-primary': "#ffffff",
+                            'dark-accent': "#ffcc00",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+
+
+    <body class="bg-[#e6dddd] dark:bg-[#121212] text-black dark:text-white min-h-screen flex flex-col">
+        <!--Navbar-->
+        <nav class="flex justify-between items-center px-6 py-4" style="background-color: rgba(186, 63, 220, 0.592);" dark:bg-gray-800 text-white transition-colors mb-4>
+        <div>
+            <button class="bg-black text-white px-2 py-1 rounded hover:bg-red-600 transition text-lg">
+                Download CV
+            </button>
+        </div>
+        <div class="flex space-x-6">
+            <a href="#about-me" class="hover:text-accent text-lg">About</a>
+            <a href="#projects" class="hover:text-accent text-lg">Projects</a>
+            <a href="#say-hello" class="hover:text-accent text-lg">Contact</a>
+       
+            <div class="switch flex items-center space-x-2">
+        <!-- Dark mode toggle-->
+                <input type="checkbox" id="toggle" class="hidden" aria-label="Toggle light/dark mode" />
+                <label for="toggle" class="bg-black rounded-full w-12 h-6 cursor-pointer flex items-center p-1 transition-colors duration-300">                    
+                        <div class="w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-300 transform" id="toggle-circle"></div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+        <main class="flex-grow p-8 max-w-4xl mx-auto transition-colors pt-4">
+            <!--Description section-->
+            <section class="flex flex-col md:flex-row items-center md:justify-between">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-2">Hi! My name is Joy. 👋</h2>
+                    <p class="text-lg">I am a web developer based in the Philippines.</p>
+                </div>
+                <div class="w-40 h-40 mt-6 md:mt-0 rounded-full overflow-hidden">
+                    <img src="img/profile.jpeg" alt="Profile Picture" class="w-full h-full object-cover" />
+                </div>
+            </section>
+
+            <div class="mt-8 text-center">
+                <button class="learn-more bg-accent text-white px-6 py-2 rounded-lg hover:bg-primary transition">
+                    Learn More
+                </button>
+            </div>
+
+            <!--About Me Section-->
+            <section id="about-me" class="mt-12">
+                <h2 class="text-2xl font-bold mb-4">About Me</h2>
+                <p class="text-lg">
+                    A driven and passionate teacher who believes that high expectations within the school
+          lead to high levels of achievement. I am committed to continuous professional development
+          and actively seek new strategies to enhance my skills in HTML and CSS for creating interactive web content.
+                </p>
+            </section>
+
+            <!--Projects section-->
+            <section id="projects" class="mt-12">
+                <h2 class="text-2xl font-bold mb-4">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white dark:bg-gray-700 shadow-md rounded-lg overflow-hidden">
+                        <img src="img/curriculum_map.jpg" alt="Screenshot_of_curriculum_map_project" loading="lazy" class="w-full h-auto" />
+                </div>
+                <div class="bg-white dark:bg-gray-700 shadow-md rounded-lg overflow-hidden">
+                    <img src="img/lesson_plan.jpg" alt="Screenshot_of_lesson_plan_project" loading="lazy" class="w-full h-auto" />
+                </div>
+                <div class="bg-white dark:bg-gray-700 shadow-md rounded-lg overflow-hidden">
+                    <img src="img/resume.jpg" alt="Screenshot_of_resume_project" loading="lazy" class="w-full h-auto" />
+                </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <p><strong>View full projects archive →</strong></p>
+                </div>
+            </section>
+
+            <!--Say Hello Section-->
+            <section id="say-hello" class="mt-12 text-center">
+                <div class="inline-block bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow">
+                    <p class="text-xl font-bold">Say Hello!</p>
+                </div>
+                <div class="border-t-2 border-gray-300 dark:border-gray-600 my-4">
+                </div>
+
+            <!--Social Icons-->
+            <div class="flex justify-center space-x-6 text-2xl">
+                <a href="https://github.com/noob-user22" target="_blank" class="hover:text-accent">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.facebook.com/iamzoeeeeyy" target="_blank" class="hover:text-accent">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/iamzoeeeeyy" target="_blank" class="hover:text-accent">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@iamzoey23" target="_blank" class="hover:text-accent">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            </section>
+        </main>
+
+        <!--Footer-->
+        <footer class="bg-gray-800 text-white py-4 text-center">
+            <p>&copy; 2024. All rights reserved. Made by Joy Alinday</p>
+        </footer>
+
+        <!--Light/Dark Mode script (JavaScript)-->
+        <script>
+            const toggleSwitch = document.getElementById('toggle');
+            const toggleCircle = document.getElementById('toggle-circle');
+            const body = document.body;
+
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+                body.classList.add(currentTheme);
+                if (currentTheme === 'dark-mode') {
+                    toggleSwitch.checked = true;
+                    toggleCircle.style.transform = 'translateX(100%)';
+                    toggleCircle.style.backgroundColor = 'white';
+                    toggleSwitch.nextElementSibling.style.backgroundColor = 'red';
+                }
+            }
+
+            toggleSwitch.addEventListener('change', function() {
+                if (this.checked) {
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark-mode');
+                    toggleCircle.style.transform = 'translateX(100%)';
+                    toggleCircle.style.backgroundColor = 'white';
+                    toggleSwitch.nextElementSibling.style.backgroundColor = 'red';
+                } else {
+                    body.classList.remove('dark-mode');
+                    localStorage.setItem('theme', 'light-mode');
+                    toggleCircle.style.transform = 'translateX(0)';
+                    toggleCircle.style.backgroundColor = 'white';
+                    toggleSwitch.nextElementSibling.style.backgroundColor = 'black';
+                }
+            });
+         </script>
+    </body>
+</html>
